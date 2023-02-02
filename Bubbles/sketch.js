@@ -78,7 +78,7 @@ function circles(x, y, d) {
 function addGUI(){
 
   //add a button
-  button = createButton("Press to start and blow into your mic");
+  button = createButton("Press to start");
 
   button.addClass("button");
 
