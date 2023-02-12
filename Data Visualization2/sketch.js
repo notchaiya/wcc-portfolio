@@ -12,7 +12,7 @@ var textOfAirQuality;
 var frequency;
 
 function setup() {
-    createCanvas(700, 500);
+    createCanvas(windowWidth, windowHeight);
     frameRate(30);
     noStroke();
     perlin = new Array(130);
@@ -26,7 +26,7 @@ function setup() {
     deltaY = loopR;
     loopAngle = TWO_PI / steps;
     iteration = 0;
-    fontSize=18;
+    fontSize=29;
   
     fetch('https://api.openaq.org/v2/measurements?location_id=275642&parameter=um100&parameter=pm25&parameter=um025&parameter=pm1&parameter=pm10&parameter=um010&date_from=2023-02-10T00:00:00Z&date_to=2023-02-11T00:00:00Z&limit=1000')
     .then(response => response.json())
@@ -66,23 +66,23 @@ function draw() {
     fill(255);
     textSize(fontSize);
     textAlign(LEFT);
-    text("Location: "+airInTokyo.location.toString(),25, 30, 500)
-    text("PM25 Value: "+airValue ,25, 60, 300);
-    text("Date: "+airInTokyo.date.local,25, height*0.9, width);
+    text("Location: "+airInTokyo.location.toString(),50, 30, 500)
+    text("PM25 Value: "+airValue ,50, 70, 300);
+    text("Date: "+airInTokyo.date.local,50, height-80, width);
 //text2
     fill(fillColor);
-    textAlign(RIGHT);
-    text(textOfAirQuality,width/4, height*0.9, 500);
+    textAlign(LEFT);
+    text(textOfAirQuality,width-370, height-80, 500);
     push();
     stroke(255,255,255,30);
     strokeWeight(3);
-    line(width-60,50,width-60,height*0.7);
-    line(60,250,60,height*0.8);
+    line(width-80,50,width-80,height*0.7);
+    line(70,250,70,height*0.8);
     pop();
   
 //background
     fill(0, 0, 0,30);
-    rect(0, 0, width, height);
+    rect(0, 0, windowWidth, windowHeight);
 
     
     updatePerlin();
@@ -96,7 +96,7 @@ function draw() {
         curveVertex(x, y);
     }
     endShape();
-    scale(0.25);
+    scale(0.3);
     iteration++;
     
 }
