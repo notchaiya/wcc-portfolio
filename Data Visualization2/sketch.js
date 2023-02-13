@@ -67,7 +67,7 @@ function draw() {
     textSize(fontSize);
     textAlign(LEFT);
     text("Location: "+airInTokyo.location.toString(),50, 30, 500)
-    text("PM25 Value: "+airValue ,50, 70, 300);
+    text("Value: "+airValue ,50, 70, 300);
     text("Date: "+airInTokyo.date.local,50, height-80, width);
 //text2
     fill(fillColor);
