@@ -1,0 +1,61 @@
+
+/*This is a comment in CSS*/
+
+body{
+    position: center;
+    font-family: Georgia, serif;
+}
+
+.myH1{
+    width:1080 px;
+    margin: 10 auto;
+    text-align: center;
+    padding-top: 100px;
+    font-family:cursive;
+    color:rgb(16, 164, 144);
+    font-size: 15px;
+}
+
+.myH2{
+    width:1080 px;
+    margin: 10 auto;
+    text-align: center;
+    padding-top: 0px;
+    font-family:cursive;
+    color:rgb(253, 133, 13);
+    font-size: 15px;
+}
+
+
+
+/* When giving a child element position absolute you should give the parent position value as well */
+/* The child will then be positioned absolute in realtion to the box container of the parent */
+/* positioning elements on the page is fundamental to understanding CSS: https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+.title{
+    position: relative;
+    width: 350px;
+    text-align: left;
+    margin: 0 auto;
+}
+.title a{
+    position: absolute;
+}
+.title a.start{
+    color:rgb(133, 157, 206);
+    left: 60%;
+    top: -20px;
+    rotate: 0deg;
+}
+.title a.paths{
+    left: 78%;
+    top: 30px;
+    rotate: 22deg;
+}
+
+a.dead-link:hover{
+    opacity: 0;
+}
+
+span#ghost{
+    opacity: 0.4;
+}
